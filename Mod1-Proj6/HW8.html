@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="div1">
+		<p id="p1">This is a paragraph.</p>
+		<p id="p2">This is another paragraph.</p>
+	</div>
+
+	<script id="newpara">
+		var para3 = document.createElement("p");
+		para3.setAttribute("id", "p3");
+		var node3 = document.createTextNode("This is a new paragraph.");
+		var para4 = document.createElement("p");
+		para4.setAttribute("id", "p4");
+		var node4 = document.createTextNode("This is another new paragraph.");
+		var para5 = document.createElement("p");
+		para5.setAttribute("id", "p5");
+		var node5 = document.createTextNode("We added both new paragraphs through Appendchild.");
+		
+		para3.appendChild(node3);
+		para4.appendChild(node4);
+		para5.appendChild(node5);
+
+		var element = document.getElementById("div1");
+		var child1 = document.getElementById("p1");
+		element.insertBefore(para3, child1);
+		var child3 = document.getElementById("p3");
+		element.insertBefore(para4, child3);
+		var child4 = document.getElementById("p4");
+		element.insertBefore(para5, child4);
+
+	</script>
+	
+</body>
+</html>

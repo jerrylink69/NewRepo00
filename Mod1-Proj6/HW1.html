@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	
+	<h2>Finding HTML Elements by Id</h2>
+
+	<p id="intro">Hello World!</p>
+	<p>This example demonstrates the <b>getElementsById</b> method.</p>
+	<p id="demo"></p>
+
+	<p id="sports">Chicago sports includes the: </p>
+	<p id="baseball">Cubs</p>
+	<p id="football">Bears</p>
+	<p id="hockey">Blackhawks</p>
+	<p id="demo2"></p>
+
+	<script>
+		var myElement = document.getElementById("intro");
+		document.getElementById("demo").innerHTML = 
+		"The text from the intro paragraph is " + myElement.innerHTML;
+
+		var myfav = document.getElementById("baseball");
+		document.getElementById("demo2").innerHTML = 
+		"My favorite taem is the " + myfav.innerHTML;
+
+	</script>
+	
+</body>
+</html>

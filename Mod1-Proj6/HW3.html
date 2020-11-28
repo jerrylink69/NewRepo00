@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<h2>Finding HTML Elements by Tag Name</h2>
+
+	<div id="main">
+		<p>The DOM is very useful.</p>
+		<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+	</div>
+
+	<div id="second">
+		<p>Chicago sports includes the: </p>
+		<p>Cubs</p>
+		<p>Bears</p>
+		<p>Blackhawks</p>
+	</div>
+
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p id="demo2b"></p>
+
+	<script>
+		var x = document.getElementById("main");
+		var y = x.getElementsByTagName("p");
+		document.getElementById("demo").innerHTML = 
+		'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+		var x2 = document.getElementById("second");
+		var y2 = x2.getElementsByTagName("p");
+		document.getElementById("demo2").innerHTML = 
+		"My favorite taem is the " + y2[1].innerHTML;
+
+		document.getElementById("demo2b").innerHTML = 
+		"My home taem is the " + y2[2].innerHTML;
+
+	</script>
+	
+</body>
+
+</html>

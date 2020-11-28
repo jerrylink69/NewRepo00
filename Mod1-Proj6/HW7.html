@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id="div1">
+		<p id="p1">This is a paragraph.</p>
+		<p id="p2">This is another paragraph.</p>
+	</div>
+
+	<script>
+		var para = document.createElement("p");
+		var node = document.createTextNode("This is a new paragraph.");
+		var para2 = document.createElement("p");
+		var node2 = document.createTextNode("This is abother new paragraph.");
+		var para3 = document.createElement("p");
+		var node3 = document.createTextNode("We added both new paragraphs through Appendchild.");
+		para.appendChild(node);
+		para2.appendChild(node2);
+		para3.appendChild(node3);
+		
+		var element = document.getElementById("div1");
+		element.appendChild(para);
+		element.appendChild(para2);
+		element.appendChild(para3);
+	</script>
+	
+</body>
+</html>
